@@ -47,7 +47,7 @@ def main():
     with open("GPB_rates.txt", "a") as file:
         file.write(f"\n{t} - {rate}")
 
-    time.sleep(10)
+    time.sleep(60)
 
 
 while True:
