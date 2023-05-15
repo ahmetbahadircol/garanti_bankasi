@@ -41,10 +41,11 @@ def main():
 
     rate = format(req.json()[6].get("exchBuyRate"), '.4f')
     t = datetime.datetime.now()
+    date = t.date()
 
     print(f"Time: {t} - GPB Rate: {rate}")
 
-    with open("GPB_rates.txt", "a") as file:
+    with open(f"GPB_rates_{date}.txt", "a") as file:
         file.write(f"\n{t} - {rate}")
 
     time.sleep(60)
